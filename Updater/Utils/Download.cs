@@ -14,7 +14,7 @@ namespace Launcher.Utils
         public static async Task DownloadLauncher(string version, string path)
         {
             await _downloader.DownloadFileTaskAsync(
-                $"https://github.com/ClassicCounter/launcher/releases/download/{version}/launcher.exe",
+                $"https://github.com/PookTechnologiesUnited/launcher/releases/download/{version}/launcher.exe",
                 path
             );
         }
