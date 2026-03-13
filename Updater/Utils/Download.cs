@@ -11,10 +11,10 @@ namespace Launcher.Utils
         };
         private static DownloadService _downloader = new DownloadService(_settings);
 
-        public static async Task DownloadLauncher(string version, string path)
+        public static async Task DownloadLauncher(string version, string path, bool ui)
         {
             await _downloader.DownloadFileTaskAsync(
-                $"https://github.com/PookTechnologiesUnited/launcher/releases/download/{version}/launcher.exe",
+                $"https://github.com/PookTechnologiesUnited/launcher/releases/download/{version}/{(ui ? "w" : "l")}auncher.exe",
                 path
             );
         }
