@@ -19,7 +19,7 @@
             List<string> launcherArguments = new();
 
             foreach (string arg in updaterArguments)
-                if (!arg.ToLowerInvariant().StartsWith("--version=") && !arg.EndsWith(".exe"))
+                if (!arg.ToLowerInvariant().StartsWith("--version=") && !arg.Contains("--ui") && !arg.EndsWith(".exe"))
                     launcherArguments.Add(arg.ToLowerInvariant());
 
             return launcherArguments;
